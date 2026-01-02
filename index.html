@@ -4,37 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vyshak SP | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <h3>Vyshak SP</h3>
-    <ul>
+    <div class="logo">Vyshak<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#academics">Academics</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contact Me</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Hi, I’m <span>Vyshak SP</span></h1>
-    <p class="subtitle">PGDM | Analytics & Operations</p>
-    <p class="tagline">
-      I work at the intersection of data, technology, and policy—turning insights into action.
+  <section id="home" class="hero">
+    <p class="subtitle">Design • Analytics • Strategy</p>
+    <h1>
+      Crafted <span>Ideas</span><br />
+      Lasting <span>Impact</span>
+    </h1>
+    <p class="description">
+      PGDM student specializing in Business Analytics, blending technology,
+      data, and design to solve real-world problems.
     </p>
-
     <div class="hero-buttons">
-      <a href="assets/Vyshak_SP_Resume.pdf" target="_blank" class="btn primary">View Resume</a>
-      <a href="#projects" class="btn secondary">Explore My Work</a>
+      <a href="#contact" class="btn primary">Get in Touch</a>
+      <a href="#projects" class="btn secondary">See My Work</a>
     </div>
   </section>
 
@@ -42,104 +42,57 @@
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-      I am a second-year PGDM student specializing in <strong>Analytics & Operations</strong> at
-      Rajagiri Business School, Kochi. With experience in business development, software development,
-      and public policy research, I bring a balanced perspective of strategy and execution.
-    </p>
-    <p>
-      I am actively seeking placement opportunities where I can apply analytical thinking,
-      technology, and structured problem-solving to real-world business challenges.
+      I’m Vyshak SP, a PGDM student at Rajagiri Business School with a background
+      in Electronics & Communication Engineering. I enjoy working at the
+      intersection of analytics, operations, and technology-driven solutions.
     </p>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section pastel">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">SQL</div>
-      <div class="card">R Programming</div>
-      <div class="card">SPSS</div>
-      <div class="card">Excel</div>
-      <div class="card">HTML / CSS / Bootstrap</div>
-      <div class="card">Power BI (Basics)</div>
-      <div class="card">Tableau (Basics)</div>
-      <div class="card">Market Research</div>
-      <div class="card">Policy Analysis</div>
-      <div class="card">Stakeholder Communication</div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-
-    <div class="timeline-item">
-      <h3>Business Development Executive</h3>
-      <span>Cincotech Engineering LLP | Sept 2022 – June 2024</span>
-      <ul>
-        <li>Conducted market research leading to a 15% increase in lead generation</li>
-        <li>Supported solution design and collaborated with cross-functional teams</li>
-        <li>Closed 10+ major deals through client presentations and demos</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Junior Software Developer (Part-time)</h3>
-      <span>InstyArt Pvt. Ltd. | May 2023 – Nov 2023</span>
-      <ul>
-        <li>Developed responsive web pages using HTML, CSS, JS, Bootstrap</li>
-        <li>Performed testing, debugging, and documentation improvements</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Policy Intern</h3>
-      <span>Guidance Tamil Nadu | Apr 2025 – Jun 2025</span>
-      <ul>
-        <li>Analyzed macroeconomic indicators to support policy recommendations</li>
-        <li>Benchmarked industrial policies across six Indian states</li>
-        <li>Prepared incentive calculations and investor proposals</li>
-      </ul>
-    </div>
+  <!-- ACADEMICS -->
+  <section id="academics" class="section dark">
+    <h2>Academics</h2>
+    <ul class="timeline">
+      <li>
+        <span>2024 – 2026</span>
+        <h3>PGDM – Business Analytics</h3>
+        <p>Rajagiri Business School, Kochi</p>
+      </li>
+      <li>
+        <span>2019 – 2023</span>
+        <h3>B.Tech – ECE</h3>
+        <p>Electronics & Communication Engineering</p>
+      </li>
+    </ul>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section pastel">
+  <section id="projects" class="section">
     <h2>Projects</h2>
-
-    <div class="project-card">
-      <h3>Automatic Biomedical Waste Segregation Bin</h3>
-      <p>
-        Built a TensorFlow-based object detection system with 92% classification accuracy
-        to automate biomedical waste segregation using IoT and servo motors.
-      </p>
-      <span>Tech: TensorFlow | IoT | Python | Automation</span>
-    </div>
-
-    <div class="project-card">
-      <h3>Single Window Portal – Industrial Approvals Study</h3>
-      <p>
-        Conducted primary research with 22 companies to evaluate approval delays and
-        proposed AI-based verification and real-time tracking mechanisms.
-      </p>
-      <span>Research | Policy Analysis | Data Interpretation</span>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>MedBin Solutions</h3>
+        <p>Automatic biomedical waste segregation using AI & object detection.</p>
+      </div>
+      <div class="project-card">
+        <h3>AI in HCD Dissertation</h3>
+        <p>Study on adoption of AI in Human Capital Development.</p>
+      </div>
+      <div class="project-card">
+        <h3>Supply Chain Analytics</h3>
+        <p>Delivery performance prediction using regression models.</p>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Let’s connect and build something meaningful.</p>
-    <div class="contact-links">
-      <a href="mailto:spvyshak@gmail.com">spvyshak@gmail.com</a>
-      <a href="https://linkedin.com/in/vyshaksp" target="_blank">LinkedIn</a>
-      <a href="tel:+918301014480">+91 83010 14480</a>
-    </div>
+  <section id="contact" class="section dark">
+    <h2>Contact Me</h2>
+    <p>Let’s collaborate or just have a conversation.</p>
+    <a href="mailto:yourmail@gmail.com" class="btn primary">Say Hello</a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Vyshak SP | Kochi, Kerala</p>
+    <p>© 2026 Vyshak SP. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
