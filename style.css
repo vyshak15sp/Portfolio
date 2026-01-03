@@ -159,9 +159,38 @@ body {
   z-index: 2;
 }
 
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(159,180,255,0.6),
+      rgba(255,255,255,0.15)
+    );
+  filter: blur(14px);
+  opacity: 0.6;
+  z-index: 1;
+}
 
-.hero-image img:hover {
-  transform: translateY(-8px) scale(1.02);
+.hero-image:hover img {
+  transform: translateY(-6px);
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 900px) {
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-image::before {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 
