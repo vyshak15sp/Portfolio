@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vyshak SP | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Vyshak<span>.</span></div>
-    <ul class="nav-links">
+    <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#academics">Academics</a></li>
@@ -23,61 +25,74 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <p class="subtitle">Design • Analytics • Strategy</p>
+    <div class="hero-overlay"></div>
+
+    <p class="subtitle">Analytics • Strategy • Technology</p>
+
     <h1>
-      Crafted <span>Ideas</span><br />
+      Crafted <span>Ideas</span><br>
       Lasting <span>Impact</span>
     </h1>
+
     <p class="description">
-      PGDM student specializing in Business Analytics, blending technology,
-      data, and design to solve real-world problems.
+      PGDM student in Business Analytics with an engineering background,
+      passionate about building data-driven, real-world solutions.
     </p>
-    <div class="hero-buttons">
+
+    <div class="buttons">
       <a href="#contact" class="btn primary">Get in Touch</a>
-      <a href="#projects" class="btn secondary">See My Work</a>
+      <a href="#projects" class="btn secondary">View Projects</a>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <h2>About Me</h2>
     <p>
-      I’m Vyshak SP, a PGDM student at Rajagiri Business School with a background
-      in Electronics & Communication Engineering. I enjoy working at the
-      intersection of analytics, operations, and technology-driven solutions.
+      I’m Vyshak SP, a PGDM student at Rajagiri Business School with experience
+      across analytics, operations, and technology-driven problem solving.
+      I enjoy working where business meets data and design.
     </p>
   </section>
 
   <!-- ACADEMICS -->
-  <section id="academics" class="section dark">
+  <section id="academics" class="section dark reveal">
     <h2>Academics</h2>
-    <ul class="timeline">
-      <li>
+
+    <div class="timeline">
+      <div class="card">
         <span>2024 – 2026</span>
         <h3>PGDM – Business Analytics</h3>
         <p>Rajagiri Business School, Kochi</p>
-      </li>
-      <li>
+      </div>
+
+      <div class="card">
         <span>2019 – 2023</span>
         <h3>B.Tech – ECE</h3>
         <p>Electronics & Communication Engineering</p>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
+  <section id="projects" class="section reveal">
     <h2>Projects</h2>
-    <div class="projects-grid">
+
+    <div class="projects">
       <div class="project-card">
+        <img src="assets/ai.jpg" alt="">
         <h3>MedBin Solutions</h3>
-        <p>Automatic biomedical waste segregation using AI & object detection.</p>
+        <p>AI-based biomedical waste segregation using object detection.</p>
       </div>
+
       <div class="project-card">
-        <h3>AI in HCD Dissertation</h3>
-        <p>Study on adoption of AI in Human Capital Development.</p>
+        <img src="assets/analytics.jpg" alt="">
+        <h3>AI Adoption Dissertation</h3>
+        <p>Study on AI adoption in Human Capital Development.</p>
       </div>
+
       <div class="project-card">
+        <img src="assets/supply.jpg" alt="">
         <h3>Supply Chain Analytics</h3>
         <p>Delivery performance prediction using regression models.</p>
       </div>
@@ -85,14 +100,14 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section dark">
+  <section id="contact" class="section dark reveal">
     <h2>Contact Me</h2>
-    <p>Let’s collaborate or just have a conversation.</p>
+    <p>Let’s connect and build something meaningful.</p>
     <a href="mailto:yourmail@gmail.com" class="btn primary">Say Hello</a>
   </section>
 
   <footer>
-    <p>© 2026 Vyshak SP. All rights reserved.</p>
+    © 2026 Vyshak SP
   </footer>
 
   <script src="script.js"></script>
