@@ -141,17 +141,24 @@ body {
   justify-content: center;
 }
 
-.hero-image img {
-  width: 320px;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 24px;
-  filter: grayscale(20%) contrast(1.05);
-  box-shadow:
-    0 40px 80px rgba(0,0,0,0.6),
-    inset 0 0 0 1px rgba(255,255,255,0.08);
-  transition: transform 0.5s ease;
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(15%) contrast(1.05);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
 
 .hero-image img:hover {
   transform: translateY(-8px) scale(1.02);
