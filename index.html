@@ -11,105 +11,116 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Vyshak<span>.</span></div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#academics">Academics</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Vyshak<span>.</span></div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-    <p class="subtitle">Analytics • Strategy • Technology</p>
+  <div class="nav-actions">
+    <button id="themeToggle">🌗</button>
+    <a href="assets/Vyshak_SP_Resume.pdf" class="resume-btn" download>Resume</a>
+  </div>
+</nav>
 
-    <h1>
-      Crafted <span>Ideas</span><br>
-      Lasting <span>Impact</span>
-    </h1>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
 
-    <p class="description">
-      PGDM student in Business Analytics with an engineering background,
-      passionate about building data-driven, real-world solutions.
-    </p>
+  <p class="subtitle">Analytics • Strategy • Technology</p>
 
-    <div class="buttons">
-      <a href="#contact" class="btn primary">Get in Touch</a>
-      <a href="#projects" class="btn secondary">View Projects</a>
+  <h1 class="gradient-text">
+    Crafted Ideas<br>
+    Lasting Impact
+  </h1>
+
+  <p class="description">
+    PGDM student specializing in Business Analytics with an engineering mindset
+    and a passion for data-driven solutions.
+  </p>
+
+  <div class="buttons">
+    <a href="#contact" class="btn primary">Get in Touch</a>
+    <a href="#projects" class="btn secondary">View Work</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>
+    I’m Vyshak SP, a PGDM student at Rajagiri Business School with experience in
+    analytics, operations, and technology-led problem solving.
+  </p>
+</section>
+
+<!-- ACADEMICS -->
+<section id="academics" class="section dark reveal">
+  <h2>Academics</h2>
+
+  <div class="grid">
+    <div class="card">
+      <span>2024 – 2026</span>
+      <h3>PGDM – Business Analytics</h3>
+      <p>Rajagiri Business School</p>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section reveal">
-    <h2>About Me</h2>
-    <p>
-      I’m Vyshak SP, a PGDM student at Rajagiri Business School with experience
-      across analytics, operations, and technology-driven problem solving.
-      I enjoy working where business meets data and design.
-    </p>
-  </section>
-
-  <!-- ACADEMICS -->
-  <section id="academics" class="section dark reveal">
-    <h2>Academics</h2>
-
-    <div class="timeline">
-      <div class="card">
-        <span>2024 – 2026</span>
-        <h3>PGDM – Business Analytics</h3>
-        <p>Rajagiri Business School, Kochi</p>
-      </div>
-
-      <div class="card">
-        <span>2019 – 2023</span>
-        <h3>B.Tech – ECE</h3>
-        <p>Electronics & Communication Engineering</p>
-      </div>
+    <div class="card">
+      <span>2019 – 2023</span>
+      <h3>B.Tech – ECE</h3>
+      <p>Electronics & Communication Engineering</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section reveal">
-    <h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
 
-    <div class="projects">
-      <div class="project-card">
-        <img src="assets/ai.jpg" alt="">
-        <h3>MedBin Solutions</h3>
-        <p>AI-based biomedical waste segregation using object detection.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/analytics.jpg" alt="">
-        <h3>AI Adoption Dissertation</h3>
-        <p>Study on AI adoption in Human Capital Development.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/supply.jpg" alt="">
-        <h3>Supply Chain Analytics</h3>
-        <p>Delivery performance prediction using regression models.</p>
-      </div>
+  <div class="grid">
+    <div class="project-card" onclick="openModal('medbin')">
+      <img src="assets/ai.jpg">
+      <h3>MedBin Solutions</h3>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section dark reveal">
-    <h2>Contact Me</h2>
-    <p>Let’s connect and build something meaningful.</p>
-    <a href="mailto:yourmail@gmail.com" class="btn primary">Say Hello</a>
-  </section>
+    <div class="project-card" onclick="openModal('ai')">
+      <img src="assets/analytics.jpg">
+      <h3>AI Adoption Study</h3>
+    </div>
 
-  <footer>
-    © 2026 Vyshak SP
-  </footer>
+    <div class="project-card" onclick="openModal('supply')">
+      <img src="assets/supply.jpg">
+      <h3>Supply Chain Analytics</h3>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="section dark reveal">
+  <h2>Contact</h2>
+  <p>Let’s collaborate and build something impactful.</p>
+  <a href="mailto:yourmail@gmail.com" class="btn primary">Say Hello</a>
+</section>
+
+<footer>
+  © 2026 Vyshak SP
+</footer>
+
+<!-- PROJECT MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
