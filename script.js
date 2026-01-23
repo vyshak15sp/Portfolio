@@ -1,8 +1,9 @@
-// Floating image motion
-const img = document.querySelector(".hero-visual img");
-
-document.addEventListener("mousemove", (e) => {
-  const x = (window.innerWidth / 2 - e.pageX) / 40;
-  const y = (window.innerHeight / 2 - e.pageY) / 40;
-  img.style.transform = `translate(${x}px, ${y}px)`;
+// Smooth scroll effect
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 });
