@@ -7,6 +7,20 @@
   --muted: #9ca3af;
 }
 
+section {
+  padding: 80px 20px;
+}
+.container {
+  padding: 0 24px;
+}
+h2 {
+  margin-bottom: 16px;
+}
+p, ul {
+  margin-bottom: 12px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
