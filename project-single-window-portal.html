@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study on Tamil Nadu Single Window Portal | Vyshak S P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Spectral:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+    <link rel="icon" type="image/png" href="favicon.png?v=3" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-header {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .project-nav-title {
+        font-size: 0.95rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .project-home-btn {
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(21, 26, 32, 0.7);
+        color: var(--ink);
+        font-size: 13px;
+      }
+
+      .project-header h1 {
+        font-family: "Spectral", serif;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.12;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .project-meta span {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(21, 26, 32, 0.72);
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .project-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 20px;
+      }
+
+      .project-panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-panel h2 {
+        font-family: "Spectral", serif;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .project-panel p,
+      .project-panel li {
+        color: var(--muted);
+      }
+
+      .project-panel ul {
+        padding-left: 18px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .back-link {
+        display: inline-flex;
+        margin-top: 18px;
+        color: var(--accent);
+      }
+
+      .project-pager {
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .pager-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: rgba(21, 26, 32, 0.72);
+        color: var(--ink);
+        font-size: 0.9rem;
+      }
+
+      body.light-theme .project-meta span {
+        background: #f3f8fd;
+      }
+
+      body.light-theme .project-home-btn {
+        background: #f3f8fd;
+        color: #1c2733;
+      }
+
+      body.light-theme .pager-btn {
+        background: #f3f8fd;
+        color: #1c2733;
+      }
+
+      @media (max-width: 900px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-nav-title {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="logo" href="index.html#projects" aria-label="Back to projects">V.</a>
+        <span class="project-nav-title">Single Window Portal Study</span>
+        <div class="project-nav-actions">
+          <a class="project-home-btn" href="index.html#home">Home</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Light</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <p class="eyebrow">Project Detail</p>
+        <h1>Study on Tamil Nadu's Single Window Portal</h1>
+        <p class="tagline">
+          Internship project at Guidance Tamil Nadu focused on evaluating the state's single window
+          facilitation system and improving industrial approval workflows through policy and process analysis.
+        </p>
+        <div class="project-meta">
+          <span>Organization: Guidance Tamil Nadu</span>
+          <span>Internship Period: April 15 to June 6, 2025</span>
+          <span>Program: PGDM Summer Internship (RBS)</span>
+        </div>
+      </section>
+
+      <section class="project-grid">
+        <article class="project-panel">
+          <h2>Internship Context</h2>
+          <p>
+            The study was conducted as part of my summer internship at Guidance Tamil Nadu, the state's
+            investment facilitation agency. The Single Window Portal was designed to streamline approvals
+            by integrating over 20 departments, while complementary initiatives like Biz Buddy support
+            grievance redressal for industries.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>Project Objective</h2>
+          <p>
+            Assess the effectiveness of the Single Window Portal for industrial approvals in Tamil Nadu
+            and identify practical improvements to investor experience, approval timelines, and operational
+            transparency.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>Study Design</h2>
+          <ul>
+            <li>Primary data collected from 22 companies that used the portal.</li>
+            <li>Coverage included users from 2024, 2023, 2022, and earlier cohorts.</li>
+            <li>Problem-centred research framework with data analysis and interpretation phases.</li>
+            <li>Findings structured into actionable suggestions and conclusion sections.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Evaluation Parameters</h2>
+          <ul>
+            <li>Portal ease of use and overall investor experience rating.</li>
+            <li>Department interaction quality and timeliness of updates.</li>
+            <li>Delay in approvals and primary causes behind delay.</li>
+            <li>Average approval time and help-desk support effectiveness.</li>
+            <li>User-reported improvement priorities.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Key Contributions During Internship</h2>
+          <ul>
+            <li>Interpreted survey outputs and converted them into issue-wise insights.</li>
+            <li>Prepared structured summaries for policy and process review discussions.</li>
+            <li>Connected user-experience gaps with workflow-level improvement suggestions.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Recommendations & Outcome</h2>
+          <ul>
+            <li>Reinforced the need for stronger inter-department coordination and status visibility.</li>
+            <li>Highlighted approval-delay drivers and service-quality gaps requiring intervention.</li>
+            <li>Provided practical inputs to improve portal responsiveness and user support quality.</li>
+            <li>Built a data-backed perspective aligned with investor-centric governance goals.</li>
+          </ul>
+        </article>
+      </section>
+
+      <a class="back-link" href="index.html#projects">Back to Projects</a>
+      <div class="project-pager">
+        <a class="pager-btn" href="project-biomedical-waste.html">&#8592; Previous Project</a>
+        <a class="pager-btn" href="index.html#projects">Next Project &#8594;</a>
+      </div>
+    </main>
+    <script>
+      const root = document.body;
+      const themeToggle = document.getElementById("theme-toggle");
+      const storageKey = "site-theme";
+      const savedTheme = localStorage.getItem(storageKey);
+
+      if (savedTheme === "light") {
+        root.classList.add("light-theme");
+      }
+
+      function updateThemeLabel() {
+        const isLight = root.classList.contains("light-theme");
+        themeToggle.textContent = isLight ? "Dark" : "Light";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        root.classList.toggle("light-theme");
+        localStorage.setItem(storageKey, root.classList.contains("light-theme") ? "light" : "dark");
+        updateThemeLabel();
+      });
+
+      updateThemeLabel();
+    </script>
+  </body>
+</html>
