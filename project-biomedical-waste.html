@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automatic Bio-medical Waste Segregation Bin | Vyshak S P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Spectral:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+    <link rel="icon" type="image/png" href="favicon.png?v=3" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-header {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-header h1 {
+        font-family: "Spectral", serif;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.12;
+      }
+
+      .project-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 20px;
+      }
+
+      .carousel-wrap {
+        margin-top: 24px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+        background-image: radial-gradient(circle at top right, rgba(137, 169, 194, 0.12), transparent 45%);
+      }
+
+      .carousel-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .carousel-head h2 {
+        font-family: "Spectral", serif;
+        font-size: 1.4rem;
+      }
+
+      .carousel-controls {
+        display: flex;
+        gap: 8px;
+      }
+
+      .carousel-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(21, 26, 32, 0.7);
+        color: var(--ink);
+        cursor: pointer;
+        backdrop-filter: blur(6px);
+      }
+
+      .carousel-viewport {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        aspect-ratio: 968 / 482;
+        background: #ffffff;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.35s ease;
+        will-change: transform;
+        height: 100%;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        margin: 0;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .carousel-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        border: 0;
+        background: rgba(137, 169, 194, 0.35);
+        cursor: pointer;
+      }
+
+      .carousel-dot.is-active {
+        width: 24px;
+        background: var(--accent);
+      }
+
+      .project-panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-panel h2 {
+        font-family: "Spectral", serif;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .project-panel p,
+      .project-panel li {
+        color: var(--muted);
+      }
+
+      .project-panel ul {
+        padding-left: 18px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .diagram-wrap {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .diagram-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .diagram-card.block-card {
+        align-self: center;
+      }
+
+      .diagram-card h2 {
+        font-family: "Spectral", serif;
+        font-size: 1.35rem;
+        margin-bottom: 12px;
+      }
+
+      .diagram-image {
+        margin: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .diagram-image img {
+        width: 100%;
+        display: block;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .back-link {
+        display: inline-flex;
+        margin-top: 10px;
+        color: var(--accent);
+      }
+
+      body.light-theme .carousel-btn {
+        background: #f3f8fd;
+      }
+
+      @media (max-width: 900px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .diagram-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .diagram-card.block-card {
+          align-self: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="logo" href="index.html#projects" aria-label="Back to projects">V.</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <p class="eyebrow">Project Detail</p>
+        <h1>Automatic Bio-medical Waste Segregation Bin</h1>
+        <p class="tagline">
+          Final year B.Tech project focused on reducing manual segregation errors in hospitals
+          by combining object detection with an automated bin movement mechanism.
+        </p>
+      </section>
+
+      <section class="project-grid">
+        <article class="project-panel">
+          <h2>Project Context</h2>
+          <p>
+            The report identifies that hospital waste disposal workflows rely heavily on manual sorting
+            into color-coded bins. This introduces human error and contamination risk, and makes
+            correction difficult once waste is disposed.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>Objective</h2>
+          <p>
+            Design an automated biomedical waste bin that detects the waste category and routes it to
+            the corresponding compartment with minimal manual intervention.
+          </p>
+        </article>
+      </section>
+
+      <section class="diagram-wrap" aria-label="Flowchart and block diagram">
+        <article class="diagram-card">
+          <h2>Flowchart</h2>
+          <figure class="diagram-image">
+            <img src="flowchart.png" alt="Flowchart of biomedical waste segregation workflow" />
+          </figure>
+        </article>
+
+        <article class="diagram-card block-card">
+          <h2>Block Diagram</h2>
+          <figure class="diagram-image">
+            <img src="blockdiagram.png" alt="Block diagram of biomedical waste segregation system" />
+          </figure>
+        </article>
+      </section>
+
+      <section class="carousel-wrap" aria-label="Project photo carousel">
+        <div class="carousel-head">
+          <h2>Project Gallery</h2>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="carousel-prev" type="button" aria-label="Previous photo">
+              &#8249;
+            </button>
+            <button class="carousel-btn" id="carousel-next" type="button" aria-label="Next photo">
+              &#8250;
+            </button>
+          </div>
+        </div>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carousel-track">
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img1.png" alt="Biomedical waste segregation project image 1" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img2.png" alt="Biomedical waste segregation project image 2" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img3.png" alt="Biomedical waste segregation project image 3" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img4.png" alt="Biomedical waste segregation project image 4" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img5.png" alt="Biomedical waste segregation project image 5" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img6.png" alt="Biomedical waste segregation project image 6" />
+            </figure>
+            <figure class="carousel-slide">
+              <img src="biomedical-photos/img7.png" alt="Biomedical waste segregation project image 7" />
+            </figure>
+          </div>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </section>
+
+      <section class="project-grid">
+
+        <article class="project-panel">
+          <h2>System Architecture</h2>
+          <ul>
+            <li>Object detection model runs on Raspberry Pi (Model 3B).</li>
+            <li>Detection output is sent from Raspberry Pi to Arduino UNO over serial communication.</li>
+            <li>Arduino controls the bin actuation mechanism using motor interfaces.</li>
+            <li>Sensors are used to support object detection/positioning during disposal flow.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Hardware & Software Used</h2>
+          <ul>
+            <li>Single Shot Multibox Detector (SSD) for object detection.</li>
+            <li>TensorFlow 1.13.0 and OpenCV for model execution and computer vision pipeline.</li>
+            <li>Raspberry Pi Model 3B for edge inference.</li>
+            <li>Arduino UNO and Arduino IDE for embedded control logic.</li>
+            <li>Motor components including stepper/servo mechanisms for physical routing.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Dataset & Model Workflow</h2>
+          <ul>
+            <li>Custom dataset prepared for the target waste classes used in the prototype.</li>
+            <li>Dataset split into training and testing sets (report notes 80% training split).</li>
+            <li>Model converted and deployed on edge device for real-time inferencing.</li>
+            <li>Classification result drives actuator commands for bin selection.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Outcome</h2>
+          <ul>
+            <li>Validated a working end-to-end prototype from detection to physical segregation.</li>
+            <li>Demonstrated feasibility of reducing manual sorting dependency in hospitals.</li>
+            <li>Established a scalable base for safer, smarter biomedical waste handling workflows.</li>
+          </ul>
+        </article>
+      </section>
+
+      <a class="back-link" href="index.html#projects">Back to Projects</a>
+    </main>
+    <script>
+      const track = document.getElementById("carousel-track");
+      const viewport = document.querySelector(".carousel-viewport");
+      const slides = Array.from(track.children);
+      const dotsRoot = document.getElementById("carousel-dots");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      let index = 0;
+      let autoTimer;
+      const AUTOPLAY_MS = 3200;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "carousel-dot" + (i === 0 ? " is-active" : "");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", () => goTo(i));
+        dotsRoot.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsRoot.children);
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = "translateX(" + index * -100 + "%)";
+        dots.forEach((d, di) => d.classList.toggle("is-active", di === index));
+      }
+
+      prevBtn.addEventListener("click", () => goTo(index - 1));
+      nextBtn.addEventListener("click", () => goTo(index + 1));
+
+      function stopAutoplay() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        autoTimer = setInterval(() => goTo(index + 1), AUTOPLAY_MS);
+      }
+
+      viewport.addEventListener("mouseenter", stopAutoplay);
+      viewport.addEventListener("mouseleave", startAutoplay);
+      viewport.addEventListener("touchstart", stopAutoplay, { passive: true });
+      viewport.addEventListener("touchend", startAutoplay, { passive: true });
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+      });
+
+      startAutoplay();
+    </script>
+  </body>
+</html>

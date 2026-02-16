@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study on Tamil Nadu Single Window Portal | Vyshak S P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Spectral:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+    <link rel="icon" type="image/png" href="favicon.png?v=3" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-header {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-header h1 {
+        font-family: "Spectral", serif;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.12;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .project-meta span {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(21, 26, 32, 0.72);
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .project-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 20px;
+      }
+
+      .project-panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-panel h2 {
+        font-family: "Spectral", serif;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .project-panel p,
+      .project-panel li {
+        color: var(--muted);
+      }
+
+      .project-panel ul {
+        padding-left: 18px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .back-link {
+        display: inline-flex;
+        margin-top: 10px;
+        color: var(--accent);
+      }
+
+      body.light-theme .project-meta span {
+        background: #f3f8fd;
+      }
+
+      @media (max-width: 900px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="logo" href="index.html#projects" aria-label="Back to projects">V.</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <p class="eyebrow">Project Detail</p>
+        <h1>Study on Tamil Nadu's Single Window Portal</h1>
+        <p class="tagline">
+          A policy and process analysis initiative to evaluate the effectiveness of Tamil Nadu's
+          investment facilitation portal and identify opportunities for intelligent workflow improvements.
+        </p>
+        <div class="project-meta">
+          <span>Domain: Policy Research & Process Optimization</span>
+          <span>Focus: Investment facilitation workflows</span>
+          <span>Output: Gap analysis and AI-driven recommendations</span>
+        </div>
+      </section>
+
+      <section class="project-grid">
+        <article class="project-panel">
+          <h2>Problem Statement</h2>
+          <p>
+            Industrial approval processes involve multiple stakeholders, document dependencies,
+            and validation cycles, often creating delays and inconsistent user experiences.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>Objective</h2>
+          <p>
+            Assess portal effectiveness from a policy and process perspective, and recommend
+            practical improvements for speed, transparency, and reliability.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>Methodology</h2>
+          <ul>
+            <li>Conducted primary research to map approval journeys and stakeholder interactions.</li>
+            <li>Reviewed policy intent versus observed process behavior.</li>
+            <li>Benchmarked against structured best practices for service delivery portals.</li>
+            <li>Identified friction points in verification and workflow handoffs.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Recommendations</h2>
+          <ul>
+            <li>Introduced AI-assisted verification checkpoints for document quality control.</li>
+            <li>Suggested workflow redesign to reduce avoidable processing loops.</li>
+            <li>Proposed clearer status tracking for improved stakeholder visibility.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>Strengthened understanding of policy-to-execution translation gaps.</li>
+            <li>Applied structured analysis to public-sector process improvement.</li>
+            <li>Improved communication of findings for decision-maker audiences.</li>
+          </ul>
+        </article>
+      </section>
+
+      <a class="back-link" href="index.html#projects">Back to Projects</a>
+    </main>
+  </body>
+</html>
