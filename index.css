@@ -1,3 +1,4 @@
+
 :root {
   color-scheme: dark;
   --bg: #0f1216;
@@ -48,6 +49,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* HEADER AND NAVIGATION */
 
 .site-header {
   position: sticky;
@@ -162,9 +165,13 @@ img {
   cursor: pointer;
 }
 
+/* MAIN CONTENT */
+
 main {
   padding: 40px 8vw 80px;
 }
+
+/* HERO SECTION */
 
 .hero {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -262,6 +269,8 @@ main {
   box-shadow: 0 16px 34px rgba(137, 169, 194, 0.5), 0 0 20px rgba(137, 169, 194, 0.35);
 }
 
+/* HERO METRICS */
+
 .hero-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -305,6 +314,8 @@ main {
   font-size: 0.9rem;
 }
 
+/* HERO IMAGE */
+
 .hero-visual {
   position: relative;
   display: grid;
@@ -347,6 +358,8 @@ main {
   transform: rotate(-3deg);
 }
 
+/* GENERAL SECTIONS */
+
 .section {
   margin-top: 90px;
   padding-top: 22px;
@@ -385,12 +398,16 @@ section[id] {
   background: linear-gradient(90deg, var(--accent), transparent);
 }
 
+/* ABOUT SECTION */
+
 .about-content {
   display: grid;
   gap: 20px;
   max-width: 760px;
   color: var(--muted);
 }
+
+/* EDUCATION SECTION */
 
 .timeline {
   display: grid;
@@ -416,6 +433,8 @@ section[id] {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+/* CARDS */
 
 .cards {
   display: grid;
@@ -467,6 +486,65 @@ section[id] {
   color: var(--muted);
 }
 
+/* EXPERIENCE CARD STYLING */
+
+.experience-card {
+  align-content: start;
+  gap: 18px;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-header h3 {
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.experience-company {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.experience-period {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.experience-card ul {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* SKILLS SECTION */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -512,6 +590,8 @@ section[id] {
   align-items: center;
 }
 
+/* PROJECTS SECTION */
+
 .tags {
   display: flex;
   gap: 10px;
@@ -545,6 +625,8 @@ section[id] {
   transform: translateY(-1px);
 }
 
+/* ACHIEVEMENTS SECTION */
+
 .achievements .achievement-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -576,6 +658,8 @@ section[id] {
   transform: translateY(-4px);
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
 }
+
+/* CONTACT SECTION */
 
 .contact-card {
   display: grid;
@@ -610,11 +694,15 @@ section[id] {
   border-radius: 16px;
 }
 
+/* FOOTER */
+
 .site-footer {
   padding: 30px 8vw 50px;
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* LIGHT THEME */
 
 body.light-theme {
   color-scheme: light;
@@ -732,6 +820,8 @@ body.light-theme .hero-metrics > div {
   box-shadow: 0 12px 24px rgba(30, 48, 66, 0.12);
 }
 
+/* ANIMATIONS */
+
 @keyframes float {
   0%,
   100% {
@@ -816,6 +906,8 @@ body.light-theme .hero-metrics > div {
   animation-delay: 0.95s;
 }
 
+/* REDUCED MOTION */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -823,6 +915,8 @@ body.light-theme .hero-metrics > div {
     scroll-behavior: auto !important;
   }
 }
+
+/* TABLET RESPONSIVENESS */
 
 @media (max-width: 960px) {
   .navbar {
@@ -857,6 +951,8 @@ body.light-theme .hero-metrics > div {
     margin-top: 20px;
   }
 }
+
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 640px) {
   html {
@@ -986,7 +1082,23 @@ body.light-theme .hero-metrics > div {
   .contact-card .download-btn {
     justify-content: center;
   }
+
+  /* EXPERIENCE CARDS ON MOBILE */
+
+  .experience-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-company {
+    font-size: 0.9rem;
+  }
+
+  .experience-period {
+    font-size: 0.75rem;
+  }
 }
+
+/* SMALL MOBILE SCREENS */
 
 @media (max-width: 480px) {
   html {
